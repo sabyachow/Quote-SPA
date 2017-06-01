@@ -11,15 +11,35 @@
 <body ng-app="app">
 <div ng-controller="HelloController">
     <h2>{{message}}</h2>
-
     <div>
-        <h1>first name: {{person.firstName}}</h1>
-        <h1>last name: {{person.lastName}}</h1>
-
+        {{error}}
+    </div>
+    {{username}}
+    <form name="searchUser">
+        <input type="search" placeholder="Username to find" ng-model="username"/>
+        <input type="submit" value="Search" ng-click="search(username)" />
+    </form>
+    <div>
+        <h1>Name : {{user.name}}</h1>
+        <h1>Location : {{user.location}}</h1>
         <div>
-            <img ng-src="{{person.imageSrc}}" tittle="{{person.firstName}} {{person.lastName}}" >
+            <img ng-src="{{user.avatar_url}}" tittle="{{user.name}}" >
         </div>
     </div>
+    <table>
+        <thead>
+        <tr>
+            <th> Name</th>
+            <th> language</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="repo in repos">
+            <td>{{repo.name}}</td>
+            <td>{{repo.language}}</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 </body>
 </html>
