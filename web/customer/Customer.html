@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AngularJS</title>
+    <script type="text/javascript" src="js/angular-1.6.4/angular.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/customer.js"></script>
+
+</head>
+
+<body ng-app="app">
+<div ng-controller="HelloController">
+    <h2>{{message}}</h2>
+
+    <div>
+        <h1>first name: {{person.firstName}}</h1>
+        <h1>last name: {{person.lastName}}</h1>
+
+        <div>
+            <img ng-src="{{person.imageSrc}}" tittle="{{person.firstName}} {{person.lastName}}" >
+        </div>
+    </div>
+</div>
+</body>
+</html>
