@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>AngularJS Sample</title>
+    <title>AngularJS</title>
     <script type="text/javascript" src="js/angular-1.6.4/angular.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/customer.js"></script>
@@ -16,8 +16,9 @@
     </div>
     {{username}}
     <form name="searchUser">
-        <input type="search" placeholder="Username to find" ng-model="username"/>
-        <input type="submit" value="Search" ng-click="search(username)" />
+        Customer Search
+        <input type="search" placeholder="First & Last Name to Customer" ng-model="name"/>
+        <input type="submit" value="Search" ng-click="search(name)" />
     </form>
     <div>
         <h1>Name : {{user.name}}</h1>

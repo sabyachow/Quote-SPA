@@ -18,6 +18,7 @@ app.controller("HelloController", function($scope, $http) {
 
     $scope.search = function(username){
       $http.get("http://api.github.com/users/"+username)
+//        $http.get("http://localhost:8080/mainresthandler/rest/contacts/"+username)
         .then(onUserComplete, onError);
 
     }
